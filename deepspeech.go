@@ -2,8 +2,11 @@
 package astideepspeech
 
 /*
+#cgo CFLAGS: -I/tmp/deepspeech/lib
+#cgo CXXFLAGS: -I/tmp/deepspeech/include
 #cgo CXXFLAGS: -std=c++11
 #cgo LDFLAGS: -ldeepspeech
+#cgo LDFLAGS: -L/tmp/deepspeech/lib/:/usr/local/lib:/usr/local/include:/usr/lib
 #include "deepspeech_wrap.h"
 #include "stdlib.h"
 */
