@@ -1,32 +1,15 @@
-[![GoReportCard](http://goreportcard.com/badge/github.com/asticode/go-astideepspeech)](http://goreportcard.com/report/github.com/asticode/go-astideepspeech)
-[![GoDoc](https://godoc.org/github.com/asticode/go-astideepspeech?status.svg)](https://godoc.org/github.com/asticode/go-astideepspeech)
 
 Golang bindings for Mozilla's [DeepSpeech](https://github.com/mozilla/DeepSpeech) speech-to-text library.
 
-`astideepspeech` is compatible with version `v0.9.0` of `DeepSpeech`.
+`go-deepspeech` is a dynamically-linked version of deepspeech using cpu and compatible with version `v0.9.0`.
 
-# Installation
-## Install DeepSpeech
+# Running
+Build & run with docker:
 
-- fetch an up-to-date `native_client.<your system>.tar.xz` matching your system from DeepSpeech's ["releases"](https://github.com/mozilla/DeepSpeech/releases/tag/v0.9.0)
-- extract its content to /tmp/deepspeech/lib
-- download `deepspeech.h` from https://github.com/mozilla/DeepSpeech/raw/v0.9.0/native_client/deepspeech.h
-- copy it to /tmp/deepspeech/include
-- export CGO_LDFLAGS="-L/tmp/deepspeech/lib/"
-- export CGO_CXXFLAGS="-I/tmp/deepspeech/include/"
-- export LD_LIBRARY_PATH=/tmp/deepspeech/lib/:$LD_LIBRARY_PATH
+    docker build -f Dockerfile -t go-deepspeech .
+    docker run go-deepspeech
 
-Alternatively, copy the downloaded `libdeepspeech.so` and `deepspeech.h` files
-to directories that are searched by default, e.g. `/usr/local/lib` and
-`/usr/local/include`, respectively.
-
-## Install astideepspeech
-
-Run the following command:
-
-    $ go get -u github.com/asticode/go-astideepspeech/...
-    
-# Example
+# Examples
 ## Get the pre-trained model and scorer
 
 Run the following commands:
