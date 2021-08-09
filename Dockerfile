@@ -3,8 +3,7 @@ FROM ubuntu:impish as builder
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-#RUN apk add --no-cache go git g++ gcc libgcc tar xz util-linux-dev libstdc++6 libc-dev
-RUN apt-get update && apt-get install -y golang gcc git libstdc++6 libc-dev wget g++ tar libc6-dev
+RUN apt-get update && apt-get install -y golang gcc git libstdc++6 wget
 
 # get deepspeech native
 RUN mkdir -p /tmp/deepspeech/lib && mkdir -p /tmp/deepspeech/include

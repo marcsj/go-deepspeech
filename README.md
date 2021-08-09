@@ -1,7 +1,7 @@
 
 Golang bindings for Mozilla's [DeepSpeech](https://github.com/mozilla/DeepSpeech) speech-to-text library.
 
-`go-deepspeech` is a dynamically-linked version of deepspeech using cpu and compatible with version `v0.9.0`.
+`go-deepspeech` is a dynamically-linked go build of DeepSpeech using cpu and compatible with version `v0.9.0`.
 
 # Running
 Build & run with docker:
